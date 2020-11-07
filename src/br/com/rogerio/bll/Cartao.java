@@ -16,7 +16,7 @@ public class Cartao implements Factory_Interface {
 
     @Override
     public String pagamentoDaCompra(Produtos produto) throws Exception {
-        String formaDePagamento = "Boleto";
+        String formaDePagamento = "Cartão";
         double taxa = 3.0;
         double totalRecebido =(produto.getTotal() * taxa / 100) + produto.getTotal();
 
@@ -33,7 +33,7 @@ public class Cartao implements Factory_Interface {
                 + "Valor unitário.........: " + produto.getValor() + "\n"
                 + "Forma de pagamento.....: " + formaDePagamento + "\n"
                 + "Taxa para esta operação; " + taxa + " %\n"
-                + "Total total recebido..R$ " + totalRecebido + "\n";
+                + "Total total recebido..R$ " + String.format("%.2f", totalRecebido) + "\n";
 
         return dadosDaCompra;
     }

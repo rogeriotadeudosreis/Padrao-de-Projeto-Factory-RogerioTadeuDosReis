@@ -33,7 +33,7 @@ public class Boleto implements Factory_Interface {
                 + "Valor unitário.........: " + produto.getValor() + "\n"
                 + "Forma de pagamento.....: " + formaDePagamento + "\n"
                 + "Taxa para esta operação; " + taxa + " %\n"
-                + "Total total recebido..R$ " + totalRecebido + "\n";
+                + "Total total recebido..R$ " + String.format("%.2f", totalRecebido) + "\n";
 
         return dadosDaCompra;
     }

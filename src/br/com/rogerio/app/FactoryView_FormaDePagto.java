@@ -25,6 +25,7 @@ public class FactoryView_FormaDePagto extends javax.swing.JFrame {
      */
     public FactoryView_FormaDePagto() {
         initComponents();
+        jTextAreaSaida.setLineWrap(true);
 
         jComboBoxFormasDePagamento.removeAllItems();
         jComboBoxFormasDePagamento.addItem("< Selecione a forma de pagamento >");
@@ -55,7 +56,7 @@ public class FactoryView_FormaDePagto extends javax.swing.JFrame {
         jTextAreaSaida = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Padrão de Projeto Factory - Formas de Pagamentos da compra de um produto");
+        setTitle("Padrão de Projeto Factory - Formas de Pagamento");
         setResizable(false);
 
         jLabel1.setText("Descrição do produto:");
@@ -83,29 +84,29 @@ public class FactoryView_FormaDePagto extends javax.swing.JFrame {
             jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelFactoryPagtosLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanelFactoryPagtosLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextFieldDescricaoDoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelFactoryPagtosLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextFieldQuantProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanelFactoryPagtosLayout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextFieldValorUnitProd, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButtonExecularPagamento)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFactoryPagtosLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanelFactoryPagtosLayout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addGap(18, 18, 18)
+                            .addComponent(jTextFieldDescricaoDoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelFactoryPagtosLayout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addGap(18, 18, 18)
+                            .addComponent(jTextFieldQuantProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanelFactoryPagtosLayout.createSequentialGroup()
+                                    .addComponent(jLabel3)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jTextFieldValorUnitProd, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButtonExecularPagamento)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFactoryPagtosLayout.createSequentialGroup()
+                            .addGap(0, 0, Short.MAX_VALUE)
                             .addComponent(jComboBoxFormasDePagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                            .addGap(209, 209, 209))))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanelFactoryPagtosLayout.setVerticalGroup(
             jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,9 +125,9 @@ public class FactoryView_FormaDePagto extends javax.swing.JFrame {
                 .addGroup(jPanelFactoryPagtosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBoxFormasDePagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonExecularPagamento))
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(16, 16, 16))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,19 +154,20 @@ public class FactoryView_FormaDePagto extends javax.swing.JFrame {
     private void jButtonExecularPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExecularPagamentoActionPerformed
         // TODO add your handling code here:
         try {
-            produto = new Produtos();
-            produto.setDescricao(jTextFieldDescricaoDoProduto.getText());
-            produto.setQuant(Integer.parseInt(jTextFieldQuantProdutos.getText()));
-            produto.setValor(Double.parseDouble(jTextFieldValorUnitProd.getText()));
+            String descricao = jTextFieldDescricaoDoProduto.getText();
+            int quantidade = Integer.parseInt(jTextFieldQuantProdutos.getText());
+            double preco = Double.parseDouble(jTextFieldValorUnitProd.getText());
+            produto = new Produtos(descricao, quantidade, preco);
 
             fabrica = FactoryFormasPagto.getInstance();
-            Factory_Interface objeto = fabrica.getProdutoEformaDePagto(jComboBoxFormasDePagamento.getSelectedItem().toString());
+            Factory_Interface objeto = fabrica.getProdutoEformaDePagto(
+                    EnumFormaDePagto.valueOf(jComboBoxFormasDePagamento.getSelectedItem().toString()));
             jTextAreaSaida.setText(objeto.pagamentoDaCompra(produto));
-            jComboBoxFormasDePagamento.setSelectedIndex(0);
 
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(null, "Atenção!!!\n" + erro.getMessage());
         }
+        jComboBoxFormasDePagamento.setSelectedIndex(0);
     }//GEN-LAST:event_jButtonExecularPagamentoActionPerformed
 
     /**

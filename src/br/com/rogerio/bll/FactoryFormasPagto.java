@@ -6,6 +6,7 @@
 package br.com.rogerio.bll;
 
 import br.com.rogerio.interfaces.Factory_Interface;
+import br.com.rogerio.enumerations.EnumFormaDePagto;
 
 /**
  *
@@ -26,24 +27,27 @@ public class FactoryFormasPagto {
         return instance;
     }
 
-    public Factory_Interface getProdutoEformaDePagto(String formaDePagto) throws Exception {
+    public Factory_Interface getProdutoEformaDePagto(EnumFormaDePagto formaDePagto) throws Exception {
 
         Factory_Interface objeto = null;
 
-        if (formaDePagto.equalsIgnoreCase("boleto")) {
-            objeto = new Boleto();
-        } else if (formaDePagto.equalsIgnoreCase("cartao")) {
-            objeto = new Cartao();
-        } else if (formaDePagto.equalsIgnoreCase("deposito")) {
-            objeto = new Deposito();
-        } else if (formaDePagto.equalsIgnoreCase("dinheiro")) {
-            objeto = new Dinheiro();
-        } else if (formaDePagto.equalsIgnoreCase("transferencia")) {
-            objeto = new Transferencia();
-        } else {
-            throw new Exception("A forma de pagamento deve ser selecionada!\n");
+        switch (formaDePagto) {
+            case BOLETO:
+                objeto = new Boleto();
+                break;
+            case CARTAO:
+                objeto = new Cartao();
+                break;
+            case DEPOSITO:
+                objeto = new Deposito();
+                break;
+            case DINHEIRO:
+                objeto = new Dinheiro();
+                break;
+            case TRANSFERENCIA:
+                objeto = new Transferencia();
+                break;
         }
         return objeto;
     }
-    
 }
